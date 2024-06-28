@@ -1,0 +1,1 @@
+export const DB_NAME="viderTube?retryWrites=true&w=majority&appName=Cluster0"
