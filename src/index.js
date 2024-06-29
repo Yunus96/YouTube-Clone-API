@@ -8,10 +8,6 @@ dotenv.config(
 
 connectDB();
 
-
-
-
-
 // Below is 1 aproach to connect db
 /* 
 import express from "express";
