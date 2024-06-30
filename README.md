@@ -11,3 +11,4 @@
 - 2nd approach to connect DB (professional approach ) (timestamp - 23:40)
 - It is very important to use async or try/catch when we talking to database.
 - Read error, do not copy paste to chatgpt or stack overflow
+- watch history feature very important feature (timestamp - 19:20)
