@@ -10,6 +10,8 @@ import fs from 'fs'
 
     const uploadOnCloudinary = async (localFilePath) => {
         try {
+            console.log(localFilePath);
+
             if (!localFilePath) {
                 console.log("couldn't find local file path")
             } else {
