@@ -1,4 +1,5 @@
 import { v2 as cloudinary } from 'cloudinary';
+import { response } from 'express';
 import fs from 'fs'
 
     // Configuration
@@ -19,7 +20,7 @@ import fs from 'fs'
                 const response = await cloudinary.uploader.upload(localFilePath, {
                     resource_type: 'auto'
                 })
-                console.log(response);
+                fs.unlinkSync(localFilePath)
                 return response;
             }
 
