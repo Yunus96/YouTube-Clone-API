@@ -66,6 +66,16 @@ const registerUser = asyncHandler(async (req, res) => {
     )
 })
 
+const loginUser = asyncHandler(async (req, res)=>{
+    //get user credentials via params
+    //validate the user inputs
+    //check credentials in db
+    //if it match's return Access, Refresh token
+    //if not return respective error
+    
+})
 
-
-export { registerUser }
+export { 
+    registerUser,
+    loginUser
+ }
