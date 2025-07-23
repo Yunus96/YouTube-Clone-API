@@ -1,3 +1,24 @@
+/**
+ * @swagger
+ * /api/v1/users/register:
+ *  post:
+ *      summary: Register a new user
+ *      tags: [User]
+ *      requestBody:
+ *          required: true
+ *          content:
+ *              application/json:
+ *                  schema:
+ *                      $ref: '#/components/schemas/User'
+ *      responses:
+ *          201:
+ *              description: User registered successfully
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          $ref: '#/components/schemas/User'
+ */
+
 import { Router } from "express";
 import { 
     loginUser, 
