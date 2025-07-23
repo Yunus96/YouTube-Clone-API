@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors"
 import cookieParser from "cookie-parser"
+import swaggerDoc from "swagger-jsdoc"
+import swaggerUi from "swagger-ui-express"
 
 const app = express()
 
@@ -33,6 +35,23 @@ import playlistRouter from "./routes/playlist.routes.js"
 import dashboardRouter from "./routes/dashboard.routes.js"
 */
 
+const options = {
+    definition: {
+        openapi: "3.0.0",
+        info: {
+            title: "YouTube Clone API",
+            version: "1.0.0",
+            description: "YouTube Clone API",
+        },
+        servers: [
+            {
+                url: "https://youtube-clone-api-zqkd.onrender.com",
+            },
+        ],
+    },
+    apis: ["./src/routes/*.routes.js"],
+};
+
 //routes declaration
 app.use("/api/v1/users", userRouter)
 
@@ -47,6 +66,8 @@ app.use("/api/v1/playlist", playlistRouter)
 app.use("/api/v1/dashboard", dashboardRouter)
 */
 
+const spacs = swaggerDoc(options);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(spacs));
 // http://localhost:8000/api/v1/users/register
 
 export { app }
