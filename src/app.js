@@ -55,8 +55,9 @@ const options = {
 //routes declaration
 app.use("/api/v1/users", userRouter)
 
-/*
+
 app.use("/api/v1/healthcheck", healthcheckRouter)
+/*
 app.use("/api/v1/tweets", tweetRouter)
 app.use("/api/v1/subscriptions", subscriptionRouter)
 app.use("/api/v1/videos", videoRouter)
@@ -66,8 +67,8 @@ app.use("/api/v1/playlist", playlistRouter)
 app.use("/api/v1/dashboard", dashboardRouter)
 */
 
-const spacs = swaggerDoc(options);
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(spacs));
+const specs = swaggerDoc(options);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 // http://localhost:8000/api/v1/users/register
 
 export { app }
