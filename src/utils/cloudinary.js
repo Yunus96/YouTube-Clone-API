@@ -8,16 +8,14 @@ import fs from 'fs'
         api_secret: process.env.CLOUDINARY_API_SECRET
     });
 
-    const uploadOnCloudinary = async (localFilePath) => {
+    const uploadOnCloudinary = async (localFilePath, type="auto") => {
         try {
-           
-
             if (!localFilePath) {
                 console.log("couldn't find local file path")
             } else {
                 //upload the file on cloudinary
                 const response = await cloudinary.uploader.upload(localFilePath, {
-                    resource_type: 'auto'
+                    resource_type: type
                 })
                 fs.unlinkSync(localFilePath)
                 return response;
