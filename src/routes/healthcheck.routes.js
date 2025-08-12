@@ -8,6 +8,7 @@ const router = Router();
  * /api/v1/healthcheck:
  *   get:
  *     summary: Healthcheck
+ *     tags: [Healthcheck]
  *     responses:
  *       200:
  *         description: Healthcheck successful
