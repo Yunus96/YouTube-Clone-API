@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors"
 import cookieParser from "cookie-parser"
-import swaggerDoc from "swagger-jsdoc"
-import swaggerUi from "swagger-ui-express"
+import swaggerUi from 'swagger-ui-express';
+import swaggerSpec from './docs/swagger.js';
 
 const app = express()
 
@@ -21,6 +21,8 @@ app.use(
 )
 app.use(express.static("public"))
 app.use(cookieParser())
+// Swagger docs route
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // routes import
 import userRouter from "./routes/user.routes.js"

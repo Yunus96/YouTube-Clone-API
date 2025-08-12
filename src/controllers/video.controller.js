@@ -19,6 +19,10 @@ const publishAVideo = asyncHandler(async (req, res) => {
 
     if(!videoLocalPath){
         throw new ApiError(400, "Video file is missing")
+    } if (!title) {
+        throw new ApiError(400, "Title is required")
+    } if (!description) {
+        throw new ApiError(400, "Description is required")
     }
 
     const video = await uploadOnCloudinary(videoLocalPath, "video")
