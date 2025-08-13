@@ -1,4 +1,5 @@
 import swaggerJSDoc from 'swagger-jsdoc';
+import userSchema from './schemas/user.schema.js';
 
 const options = {
   definition: {
@@ -13,6 +14,11 @@ const options = {
         url: 'https://youtube-clone-api-zqkd.onrender.com',
       },
     ],
+    components: {
+      schemas: {
+        User: userSchema,
+      },
+    },
   },
   apis: ['./src/routes/*.js'], // <-- Auto-generates docs from comments in route files
 };

@@ -1,22 +1,24 @@
 /**
  * @swagger
  * /api/v1/users/register:
- *  post:
- *      summary: Register a new user
- *      tags: [User]
- *      requestBody:
- *          required: true
- *          content:
- *              application/json:
- *                  schema:
- *                      $ref: '#/components/schemas/User'
- *      responses:
- *          201:
- *              description: User registered successfully
- *              content:
- *                  application/json:
- *                      schema:
- *                          $ref: '#/components/schemas/User'
+ *   post:
+ *     summary: Create a new user
+ *     tags: [User]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/User'
+ *     responses:
+ *       201:
+ *         description: User created successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ *       400:
+ *         description: Bad request (validation error)
  */
 
 import { Router } from "express";
