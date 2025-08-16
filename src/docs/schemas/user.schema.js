@@ -20,9 +20,24 @@ const userSchema = {
       },
       avatar: {
         type: 'string',
-        example: 'https://example.com/avatar.jpg'
+        format: 'binary',
+        description: 'upload image'
       }
     }
   };
 
-export default userSchema;
+const loginSchema = {
+    type: 'object',
+    required: ['username', 'password'],
+    properties: {
+        username: {
+        type: 'string',
+        example: 'john@example.com'
+      },
+      password: {
+        type: 'string',
+        example: 'password'
+      }
+    }
+  };
+export  { userSchema, loginSchema };

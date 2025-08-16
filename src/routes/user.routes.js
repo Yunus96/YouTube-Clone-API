@@ -7,7 +7,7 @@
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:
+ *        multipart/form-data:
  *           schema:
  *             $ref: '#/components/schemas/User'
  *     responses:
@@ -19,6 +19,29 @@
  *               $ref: '#/components/schemas/User'
  *       400:
  *         description: Bad request (validation error)
+ 
+ */
+/**
+ * @swagger
+ * /api/v1/users/login:
+ *   post:
+ *     summary: Login to the application
+ *     tags: [Login]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Login'
+ *     responses:
+ *       200:
+ *         description: Successful login returns a JWT token
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Login'
+ *       401:
+ *         description: Invalid credentials
  */
 
 import { Router } from "express";
