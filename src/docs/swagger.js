@@ -1,5 +1,5 @@
 import swaggerJSDoc from 'swagger-jsdoc';
-import { userSchema, loginSchema } from './schemas/user.schema.js';
+import { userSchema, loginSchema, logoutSchema } from './schemas/user.schema.js';
 
 const options = {
   definition: {
@@ -18,6 +18,7 @@ const options = {
       schemas: {
         User: userSchema,
         Login: loginSchema,
+        Logout: logoutSchema,
       },
     },
   },

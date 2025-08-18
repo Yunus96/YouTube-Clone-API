@@ -46,10 +46,23 @@
 
 /**
  * @swagger
- * /api/v1/logout:
- *   get:
+ * /api/v1/users/logout:
+ *   post:
  *     summary: Logout from the application
  *     tags: [Logout]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Logout'
+ *     responses:
+ *       200:
+ *         description: Successful logout
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Logout'
  */
 import { Router } from "express";
 import { 

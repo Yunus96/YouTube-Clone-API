@@ -40,4 +40,16 @@ const loginSchema = {
       }
     }
   };
-export  { userSchema, loginSchema };
+
+  const logoutSchema = {
+    type: 'object',
+    required: ['_id'],
+    properties: {
+      _id: {
+        type: 'string',
+        description: 'User ID',
+        example: '64e2b9f8c7a1f1c23a4d9e01'
+      }
+    }
+  };
+export  { userSchema, loginSchema, logoutSchema };
