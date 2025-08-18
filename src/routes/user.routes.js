@@ -44,6 +44,13 @@
  *         description: Invalid credentials
  */
 
+/**
+ * @swagger
+ * /api/v1/logout:
+ *   get:
+ *     summary: Logout from the application
+ *     tags: [Logout]
+ */
 import { Router } from "express";
 import { 
     loginUser, 
@@ -77,7 +84,6 @@ router.route("/register").post(
     ]),
     registerUser
     )
-
 router.route("/login").post(loginUser)
 
 //secured routes
