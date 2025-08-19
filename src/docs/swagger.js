@@ -1,5 +1,5 @@
 import swaggerJSDoc from 'swagger-jsdoc';
-import { userSchema, loginSchema, logoutSchema } from './schemas/user.schema.js';
+import { userSchema, loginSchema, logoutSchema, changePasswordSchema } from './schemas/user.schema.js';
 
 const options = {
   definition: {
@@ -19,8 +19,16 @@ const options = {
         User: userSchema,
         Login: loginSchema,
         Logout: logoutSchema,
+        ChangePassword: changePasswordSchema
       },
     },
+    securitySchemes: {
+      bearerAuth: {
+        type: 'http',
+        scheme: 'bearer',
+        bearerFormat: 'JWT'
+      }
+    }
   },
   apis: ['./src/routes/*.js'], // <-- Auto-generates docs from comments in route files
 };

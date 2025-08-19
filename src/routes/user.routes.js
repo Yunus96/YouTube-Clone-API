@@ -64,6 +64,30 @@
  *             schema:
  *               $ref: '#/components/schemas/Logout'
  */
+
+/**
+ * @swagger
+ * /api/v1/users/change-password:
+ *   post:
+ *     summary: Change user password
+ *     tags: [Change Password]
+ *     security:
+ *       - bearerAuth: []   # 👈 Requires Authorization header
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/ChangePassword'
+ *     responses:
+ *       200:
+ *         description: Password changed successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ChangePassword'
+ */
+
 import { Router } from "express";
 import { 
     loginUser, 

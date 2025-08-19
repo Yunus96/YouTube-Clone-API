@@ -52,4 +52,19 @@ const loginSchema = {
       }
     }
   };
-export  { userSchema, loginSchema, logoutSchema };
+
+  const changePasswordSchema = {
+    type: 'object',
+    required: ['oldPassword', 'newPassword'],
+    properties: {
+      oldPassword: {
+        type: 'string',
+        example: 'oldPassword123'
+      },
+      newPassword: {
+        type: 'string',
+        example: 'newSecurePassword!@#'
+      }
+    }
+  };
+export  { userSchema, loginSchema, logoutSchema, changePasswordSchema };
