@@ -19,8 +19,8 @@
  *               $ref: '#/components/schemas/User'
  *       400:
  *         description: Bad request (validation error)
- 
  */
+//login swagger
 /**
  * @swagger
  * /api/v1/users/login:
@@ -43,7 +43,7 @@
  *       401:
  *         description: Invalid credentials
  */
-
+//logout swagger
 /**
  * @swagger
  * /api/v1/users/logout:
@@ -65,6 +65,7 @@
  *               $ref: '#/components/schemas/Logout'
  */
 
+//change password
 /**
  * @swagger
  * /api/v1/users/change-password:

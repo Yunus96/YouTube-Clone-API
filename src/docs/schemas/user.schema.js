@@ -1,3 +1,14 @@
+const healthCheckSchema = {
+  type: 'object',
+  properties: {
+    status: {
+      type: 'string',
+      example: 'OK'
+    }
+  }
+};
+
+
 const userSchema = {
     type: 'object',
     required: ['fullname', 'email', 'username', 'password','avatar'],
@@ -67,4 +78,4 @@ const loginSchema = {
       }
     }
   };
-export  { userSchema, loginSchema, logoutSchema, changePasswordSchema };
+export  { userSchema, loginSchema, logoutSchema, changePasswordSchema, healthCheckSchema };

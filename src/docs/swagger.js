@@ -1,5 +1,9 @@
 import swaggerJSDoc from 'swagger-jsdoc';
-import { userSchema, loginSchema, logoutSchema, changePasswordSchema } from './schemas/user.schema.js';
+import { userSchema, 
+  loginSchema, 
+  logoutSchema, 
+  changePasswordSchema, 
+  healthCheckSchema } from './schemas/user.schema.js';
 
 const options = {
   definition: {
@@ -19,7 +23,8 @@ const options = {
         User: userSchema,
         Login: loginSchema,
         Logout: logoutSchema,
-        ChangePassword: changePasswordSchema
+        ChangePassword: changePasswordSchema,
+        HealthCheck: healthCheckSchema
       },
     },
     securitySchemes: {
